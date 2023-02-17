@@ -9,7 +9,7 @@
 
 int main(void)
 {
-int i , j;
+int i, j;
 for (i = 'A'; i <= 'Z'; i++)
 {
 char letter = tolower(i);
