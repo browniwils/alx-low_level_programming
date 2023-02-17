@@ -27,5 +27,5 @@ int main(void)
   /* print out the memoery size of the variable with type float*/
   printf("Size of a float: %lu byte(s)\n", sizeof(floatType));
 
-  return 0;
+  return (0);
 }
