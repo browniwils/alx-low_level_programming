@@ -2,7 +2,8 @@
 
 /**
  * main - The entry point of this program
- * return 0 - main must always return 0
+ * Description: 'the program prints out the memory sizes of variables
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
