@@ -4,7 +4,7 @@
 /**
  * main - entry point
  * Description: 'print to standard output'
- * Return: Always 0 
+ * Return: Always 0 (success)
  */
 
 int main(void)
