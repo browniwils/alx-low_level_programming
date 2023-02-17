@@ -10,9 +10,6 @@
 
 int main(void)
 {
-char msg[];
-msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-int messageLength = strlen(msg);
-write(1, msg, messageLength);
+write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 return (1);
 }
