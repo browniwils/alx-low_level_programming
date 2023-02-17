@@ -1,14 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - This is entry point function of the program
- * Return 0 - By all means return 0 as required expected value
+ * main - The entry point of this program
+ * Description: 'the program prints a message to standard output'
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-  char myMessage[] = "\"Programming is like building a multilingual puzzle";
+char myMessage[] = "\"Programming is like building a multilingual puzzle";
 
-  puts(myMessage);
+puts(myMessage);
 
-  return 0;
+ return (0);
 }

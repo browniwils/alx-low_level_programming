@@ -2,14 +2,16 @@
 #include <string.h>
 
 /**
- * main - the entry point of the programm
- * return 0 - required value to return from main
+ * main - The entry point of this program
+ * Description: 'the program prints message to standard output
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-  char myMessage[] = "with proper grammar, but the outcome is a piece of art,";
+char myMessage[] = "with proper grammar, but the outcome is a piece of art,";
 
-  printf("%s\n", myMessage);
+printf("%s\n", myMessage);
 
-  return 0;
+return (0);
 }
