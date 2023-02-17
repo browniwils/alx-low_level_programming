@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-int main()
+/**
+ * main - The entry point of this program
+ * return 0 - main must always return 0
+ */
+int main(void)
 {
   int intType;
   float floatType;
