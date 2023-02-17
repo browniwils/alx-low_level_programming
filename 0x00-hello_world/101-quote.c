@@ -10,8 +10,8 @@
 
 int main(void)
 {
-const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-int messageLength = strlen(message);
-write(1, message, messageLength);
+const char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+int messageLength = strlen(msg);
+write(1, msg, messageLength);
 return (1);
 }
