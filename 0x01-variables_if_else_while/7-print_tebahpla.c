@@ -12,11 +12,8 @@ int main(void)
 int i;
 for (i = 'Z'; i >= 'A'; i--)
 {
-if (i != 'Q' && i != 'E')
-{
 char letter = tolower(i);
 putchar(letter);
-}
 }
 
 putchar('\n');
