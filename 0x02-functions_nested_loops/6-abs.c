@@ -2,6 +2,7 @@
 
 /**
  * _abs - returns an integer
+ * @n: integer to check
  *Return: an integer
  */
 
