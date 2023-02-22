@@ -3,7 +3,7 @@
 /**
  * print_sign - print to standard output the state of a number
  * @n: the integer to check
- * Return: 1 if output is addition sign 
+ * Return: 1 if output is addition sign
  * otherwise 0 else -1 if output is minus sign
  */
 
