@@ -1,16 +1,17 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * print_number - display number to standard output
+ * print_numbers - print number to standard output
  */
 
-void print_number(void)
+void print_numbers(void)
 {
-	int i;
+	char c;
 
-	for (i = 48; i <= 58; i++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		_putchar(i);
+		_putchar(c);
 	}
 	_putchar('\n');
 }
