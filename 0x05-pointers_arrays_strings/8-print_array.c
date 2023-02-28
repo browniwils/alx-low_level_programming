@@ -11,15 +11,22 @@ void print_array(int *arr, int n)
 {
 	int i;
 
-	for (i = 0; i < n; i++)
+	if (n > 0)
 	{
-		if (i == n - 1)
+		for (i = 0; i < n; i++)
 		{
-			printf("%d\n", arr[i]);
+			if (i == n - 1)
+			{
+				printf("%d\n", arr[i]);
+			}
+			else
+			{
+				printf("%d, ", arr[i]);
+			}
 		}
-		else
-		{
-			printf("%d, ", arr[i]);
-		}
+	}
+	else
+	{
+		printf("\n");
 	}
 }
