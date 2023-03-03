@@ -1,19 +1,28 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * rot13 - encrypt string
+ * @s: string to be encrypted
+ * Return: encrypted string
+ */
+
 char *rot13(char *s)
 {
 	int i = 0;
+	int j;
+	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char cipher[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (s[i] != '\0')
 	{
-		if ((s[i] >= 'a' && s[i] <= 'm') || (s[i] >= 'A' && s[i] <= 'M'))
+		for (j = 0; j < 26 * 2; j++)
 		{
-			s[i] = s[i] + 13;
-		}
-		else if ((s[i] >= 'n' && s[i] <= 'z') || (s[i] >= 'N' && s[i] <= 'Z'))
-		{
-			s[i] = s[i] - 13;
+			if (s[i] == alpha[j])
+			{
+				s[i] = cipher[j];
+				break;
+			}
 		}
 		i++;
 	}
