@@ -7,7 +7,7 @@
  * Return: Always 0
  */
 
-void print_number(int n);
+void print_number(int n)
 {
 	unsigned int i;
 
@@ -15,7 +15,7 @@ void print_number(int n);
 	if (n < 0)
 	{
 		_putchar('-');
-		i = -1 * n;
+		i = -n;
 	}
 
 	if (i / 10 != 0)
