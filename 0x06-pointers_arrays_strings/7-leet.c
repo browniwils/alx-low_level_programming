@@ -9,8 +9,8 @@
 
 char *leet(char *s)
 {
-	char enc[5] = {'4', '3', '0', '7', '1'};
-	char code[5] = {'A', 'E', 'O', 'T', 'L'};
+	char enc[5] = "43071";
+	char code[5] = "AEOTL";
 	int dbUL = 32; /* difference between uppercase and lowercase */
 	int i = 0, j;
 
