@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i, j, k;
 	int results = 0;
 
 	if (argc < 2)
@@ -22,18 +22,19 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!(isdigit(atoi(argv[i]))))
+		for (j = 0; argv[i][j] != 0; j++)
 		{
-			if (atoi(argv[i]) > 0)
+			if ((argv[i][j] < 48 || argv[i][j] > 57) && argv[i][j] != 45)
 			{
-				j = atoi(argv[i]);
-				results += j;
+				printf("Error\n");
+				return (1);
 			}
 		}
-		else
+
+		if (atoi(argv[i]) > 0)
 		{
-			printf("Error\n");
-			return (1);
+			k = atoi(argv[i]);
+			results += k;
 		}
 	}
 
