@@ -14,11 +14,11 @@ char *str_concat(char *s1, char *s2)
 
 	while (s1 && s1[s1len])
 	{
-		len1++;
+		s1len++;
 	}
 	while (s2 && s2[s2len])
 	{
-		len2++;
+		s2len++;
 	}
 
 	arr = malloc(sizeof(char) * (s1len + s2len + 1));
