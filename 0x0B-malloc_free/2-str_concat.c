@@ -14,19 +14,11 @@ char *str_concat(char *s1, char *s2)
 	int i, s1len = 0, s2len = 0;
 	char *arr;
 
-	if (s1 == NULL)
-	{
-		s1 = " ";
-	}
-	if (s2 == NULL)
-	{
-		s2 = " ";
-	}
-	while (s1[s1len] != 0)
+	while (s1 != NULL && s1[s1len] != 0)
 	{
 		s1len++;
 	}
-	while (s2[s2len] != 0)
+	while (s2 != NULL && s2[s2len] != 0)
 	{
 		s2len++;
 	}
@@ -35,13 +27,19 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	for (i = 0; s1[i] != 0; i++)
+	if (s1 != NULL)
 	{
-		arr[i] = s1[i];
+		for (i = 0; i < s1len; i++)
+		{
+			arr[i] = s1[i];
+		}
 	}
-	for (; i <= (s1len + s2len - 1); i++)
+	if (s2 != NULL)
 	{
-		arr[i] = s2[i - s1len];
+		for (; i < (s1len + s2len); i++)
+		{
+			arr[i] = s2[i - s1len];
+		}
 	}
 	arr[i] = '\0';
 	return (arr);
