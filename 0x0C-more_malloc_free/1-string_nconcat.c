@@ -48,7 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = strlen2;
 	}
 
-	memory = malloc((sizeof(char) * (strlen1 + n)) + 1);
+	memory = malloc(sizeof(char) * (strlen1 + n + 1));
 	if (memory == NULL)
 	{
 		return (NULL);
