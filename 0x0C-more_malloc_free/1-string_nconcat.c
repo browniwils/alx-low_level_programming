@@ -31,7 +31,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, strlen1, strlen2;
 	char *memory;
-
+	
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	strlen1 = _strlen(s1);
 	strlen2 = _strlen(s2);
 
@@ -51,7 +59,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		memory[i] = s1[i];
 	}
 
-	for (i = 0; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
 		memory[strlen1 + i] = s2[i];
 	}
