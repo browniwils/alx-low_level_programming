@@ -1,69 +1,50 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
 /**
- * _strlen - get lenght of a string
- * @str: string
- * Return: length of string
- */
-
-int _strlen(char *str)
-{
-	unsigned int i = 0;
-
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- * string_nconcat - joins two strings
+ * *string_nconcat - concatenates 2 strings
  * @s1: string 1
  * @s2: string 2
- * @n: number of @s2 needed
- * Return: new string of 1 and 2 pointer otherwise NULL
+ * @n: size of @s2 needed
+ * Return: pointer to the new string
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, strlen1, strlen2;
+	unsigned int i = 0, j = 0, strlen1 = 0, strlen2 = 0;
 	char *memory;
-	
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-	strlen1 = _strlen(s1);
-	strlen2 = _strlen(s2);
 
-	if (n > strlen2)
+	while (s1 && s1[strlen1])
+	{
+		strlen1++;
+	}
+	while (s2 && s2[strlen2])
+	{
+		strlen2++;
+	}
+
+	if (n >= strlen2)
 	{
 		n = strlen2;
 	}
 
-	memory = malloc((strlen1 + n + 1) * sizeof(char));
+	memory = malloc(sizeof(char) * (strlen1 + n + 1));
 	if (memory == NULL)
 	{
 		return (NULL);
 	}
-
-	for (i = 0; i < strlen1; i++)
+	while (i < strlen1)
 	{
 		memory[i] = s1[i];
+		i++;
 	}
-
-	for (; i < (strlen1 + n); i++)
+	while (n < strlen2 && i < (strlen1 + n))
 	{
-		memory[i] = s2[i - strlen1];
+		s[i++] = s2[j++];
 	}
-
-	memory[strlen1 + i] = '\0';
-	return (memory);
+	while (n >= strlen2 && i < (strlen1 + strlen2))
+	{
+		memory[i++] = s2[j++];
+	}
+	memory[i] = '\0';
+	return (s);
 }
