@@ -39,12 +39,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	while (n < strlen2 && i < (strlen1 + n))
 	{
-		s[i++] = s2[j++];
+		memory[i++] = s2[j++];
 	}
 	while (n >= strlen2 && i < (strlen1 + strlen2))
 	{
 		memory[i++] = s2[j++];
 	}
 	memory[i] = '\0';
-	return (s);
+	return (memory);
 }
