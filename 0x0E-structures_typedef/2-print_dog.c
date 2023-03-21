@@ -18,6 +18,10 @@ void print_dog(struct dog *d)
 	{
 		d->name = nil;
 	}
+	else if (d->age == NULL)
+	{
+		d->age = 0;
+	}
 	else if (d->owner == NULL)
 	{
 		d->owner = nil;
