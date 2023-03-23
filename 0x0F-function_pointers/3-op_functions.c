@@ -51,13 +51,6 @@ int op_mul(int a, int b)
 
 int op_div(int a, int b)
 {
-	char *error_message = "Error";
-
-	if (b == 0)
-	{
-		printf("%s\n", error_message);
-		exit(100);
-	}
 	return (a / b);
 }
 
@@ -70,12 +63,5 @@ int op_div(int a, int b)
 
 int op_mod(int a, int b)
 {
-	char *error_message = "Error";
-
-	if (b == 0)
-	{
-		printf("%s\n", error_message);
-		exit(100);
-	}
 	return (a % b);
 }

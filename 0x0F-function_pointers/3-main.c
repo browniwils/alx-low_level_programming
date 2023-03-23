@@ -13,8 +13,8 @@
 int main(int argc, char *argv[])
 {
 	int (*_operate)(int, int);
-	int input_1, input_2;
-	char *error_message = "Error";
+	int input_1, input_2, op_result;
+	char *error_message = "Error", *op;
 
 	if (argc != 4)
 	{
@@ -22,8 +22,9 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
+	op = argv[2];
 	_operate = get_op_func(argv[2]);
-	if (_operate == NULL || argv[2][1])
+	if (_operate == NULL || op == 0)
 	{
 		printf("%s\n", error_message);
 		exit(99);
@@ -32,7 +33,14 @@ int main(int argc, char *argv[])
 	input_1 = atoi(argv[1]);
 	input_2 = atoi(argv[3]);
 
-	printf("%d\n", _operate(input_1, input_2));
+	if ((*(op) != 37 || *(op) != 47) && input_2 == 0)
+	{
+		printf("%s\n", error_message);
+		exit(100);
+	}
+
+	op_result = _operate(input_1, input_2);
+	printf("%d\n", op_result);
 
 	return (0);
 }
