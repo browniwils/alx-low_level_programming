@@ -8,7 +8,7 @@
 
 void free_list(list_t *head)
 {
-	list_t temp_node;
+	list_t *temp_node;
 
 	while (head != NULL)
 	{
