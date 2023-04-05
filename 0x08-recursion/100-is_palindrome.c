@@ -24,7 +24,7 @@ int is_palindrome(char *s)
  * check_palindrome - characters for palindrome in recursion
  * @s: string
  * @i: iterator
- * @slen: string length
+ * @len: string length
  * Return: 1 for true otherwise 0 for false
  */
 
