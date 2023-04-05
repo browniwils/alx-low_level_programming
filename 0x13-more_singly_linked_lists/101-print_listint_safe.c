@@ -24,7 +24,7 @@ size_t print_listint_safe(const listint_t *head)
 		temp_2 = head;
 		temp_node = 0;
 	
-		while (temp_node == nodes)
+		while (temp_node < nodes)
 		{
 			if (temp_1 == temp_2)
 			{
