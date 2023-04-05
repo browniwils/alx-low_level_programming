@@ -9,15 +9,12 @@
 
 int is_palindrome(char *s)
 {
-	int pal;
-
 	if (*s == 0)
 	{
 		return (1);
 	}
 
-	pal = check_palindrome(s, 0, _strlen(s));
-	return (pal);
+	return check_palindrome(s, 0, _strlen(s));
 }
 
 /**
