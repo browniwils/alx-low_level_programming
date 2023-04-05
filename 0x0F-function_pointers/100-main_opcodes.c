@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int b, i;
-	char *list, *e = "Error\n";
+	char *list, *e = "Error";
 
 	if (argc != 2)
 	{
