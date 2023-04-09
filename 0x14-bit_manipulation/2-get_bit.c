@@ -4,7 +4,7 @@
 /**
  * get_bit - get value of a bit at an index
  * @n: number
- * @i: index
+ * @index: index
  * Return: index's value
  */
 
