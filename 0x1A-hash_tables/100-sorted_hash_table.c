@@ -36,7 +36,7 @@ shash_table_t *shash_table_create(unsigned long int size)
  * make_shash_node - makes a node for the sorted hash table
  * @key: key for the data
  * @value: data to be stored
- * Return: pointer to the new node, otherwise NULL 
+ * Return: pointer to the new node, otherwise NULL
  */
 
 shash_node_t *make_shash_node(const char *key, const char *value)
