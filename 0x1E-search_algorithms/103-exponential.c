@@ -30,7 +30,6 @@ int bsearch(int *array, size_t left, size_t right, int value)
 		else
 			left = i + 1;
 	}
-
 	return (-1);
 }
 
